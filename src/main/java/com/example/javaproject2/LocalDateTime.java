@@ -1,9 +1,7 @@
 package com.example.javaproject2;
 
-public class LocalDateTime {
-    private LocalDateTime localDateTime;
+import java.time.DateTimeException;
 
-    public LocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
-    }
+public class LocalDateTime {
+
 }
