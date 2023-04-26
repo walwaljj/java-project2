@@ -5,5 +5,7 @@ public class ArrLength {
 
         int[] arr = new int[5];
         System.out.println(arr.length);
+
+        System.out.printf("%d %% %d 의 나머지는? %d",10, 3, 10%3);
     }
 }
