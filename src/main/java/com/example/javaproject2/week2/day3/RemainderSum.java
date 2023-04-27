@@ -4,7 +4,7 @@ public class RemainderSum {
     public static void main(String[] args) {
         int num = 687;
         int firstRemainder = num % 10;
-        num = num / 10;
+        num = num / 10; // 대입연산.
         int secondRemainder = num % 10;
         num = num / 10;
         int thirdRemainder = num % 10;
