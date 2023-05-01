@@ -10,29 +10,14 @@ public class sequenceNQueries {
         snq.solution(arr,queries);
     }
     public int[] solution(int[] arr, int[][] queries) {
-//        int[] answer = {arr.length};
         int temp = 0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < queries.length; j++) {
-                    temp = arr[queries[j][0]];
-                    arr[queries[j][0]] = arr[queries[j][1]];
-                    arr[queries[j][1]] = temp;
-//                for (int k  = 0; k < queries[j].length; k++) {
-//                    temp = arr[queries[j][0]];
-//                    arr[queries[j][0]] = arr[queries[j][1]];
-//                    arr[queries[j][1]] = temp;
-//                    System.out.println(queries[j][k]);
-//                    System.out.println(arr[queries[j][k]]);
+        for (int i = 0; i < queries.length; i++) {
+            temp = arr[queries[i][0]];
+            arr[queries[i][0]] = arr[queries[i][1]];
+            arr[queries[i][1]] = temp;
 
-//                }
-//                System.out.println(arr[queries[j][0]]);
-            }
-//            System.out.println(Arrays.toString(arr));
         }
-//        Arrays.toString(arr);
-        for (int i : arr) {
-            System.out.println(i);
-        }
+
         return arr;
     }
 }
