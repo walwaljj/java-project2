@@ -18,10 +18,9 @@ public class ZeroOrFive {
     }
 
     private static boolean isZeroOrFive(int num) {
-        boolean bl = false;
         while (num > 0){
             if(num % 10 != 5 && num % 10 != 0){
-                return bl;
+                return false;
             }else {
                 num /= 10;
             }
