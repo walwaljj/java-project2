@@ -2,12 +2,15 @@ package com.example.javaproject2.week4.day1;
 
 public class User {
 
-        String name;
-        String phoneNumber ;
-        int age;
+    String name;
+    String phoneNumber ;
+    int age;
 
-        boolean isAdult(){
-            return age >= 10;
-
+    boolean isAdult(){
+        return age >= 10;
     }
+
+
+
+
 }
