@@ -13,14 +13,13 @@ abstract class IsMinOrMax {
 class MaxNum extends IsMinOrMax{
    @Override
    public boolean isMinOrMax(int maxNum, int num) {
-      return maxNum < num ? true : false;
+      return maxNum < num;
    }
 }
-
 class MinNum extends IsMinOrMax{
    @Override
    public boolean isMinOrMax(int minNum, int num) {
-      return minNum > num ? true : false;
+      return minNum > num ;
    }
 }
 public class MinAndMaxTest{

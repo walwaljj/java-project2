@@ -1,9 +1,9 @@
 package com.example.javaproject2.week4.day2;
 
-public class DiEx {
+public class DiEx1 {
     private ShapeDrawer shapeDrawer;
 
-    public DiEx(ShapeDrawer shapeDrawer) {
+    public DiEx1(ShapeDrawer shapeDrawer) {
         this.shapeDrawer = shapeDrawer;
     }
 
@@ -12,7 +12,7 @@ public class DiEx {
     }
     private ParallelogramShapeDrawer parallelogramShapeDrawer;
 
-    public  DiEx(ParallelogramShapeDrawer parallelogramShapeDrawer){
+    public  DiEx1(ParallelogramShapeDrawer parallelogramShapeDrawer){
         this.parallelogramShapeDrawer = parallelogramShapeDrawer;
     }
     public void doSth2(){
