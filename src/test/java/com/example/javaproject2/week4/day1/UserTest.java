@@ -2,7 +2,7 @@ package com.example.javaproject2.week4.day1;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserTest {
+public class UserTest {
     public static void main(String[] args) {
         User user1 = new User();
         user1.name = "수현";
