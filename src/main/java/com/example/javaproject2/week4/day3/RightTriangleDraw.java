@@ -1,23 +1,27 @@
 package com.example.javaproject2.week4.day3;
 
-public class RightTriangleDraw extends ShapeDrawer{
+
+import java.io.IOException;
+
+public class RightTriangleDraw extends ShapeDrawer2 {
+    public RightTriangleDraw(Printer2 printer) {
+        super(printer);
+    }
+
+    @Override
     public String makeALine(int h, int i) {
-        return String.format("%s%s\n", " ".repeat(h - i),"*".repeat(i * 2 -1));
+        return String.format("%s%s", " ".repeat(h - i),"*".repeat(i * 2 -1));
     }
-    public static void main(String[] args) {
-        ShapeDrawer sd = new RightTriangleDraw();
-        int h = 5;
-        sd.printShape(h);
-    }
+    public static void main(String[] args) throws IOException {
 
-}
-abstract class ShapeDrawer{
-    public abstract String makeALine(int h, int i);
+        ShapeDrawer2 sd1 = new RightTriangleDraw(new FilePrinter());
+        int height1 = 5;
+        sd1.printShape(height1);
 
-    public void printShape(int h) {
-        for (int i = 1; i <= h; i++) {
-            System.out.print(makeALine(h, i));
-        }
+        RightTriangleDraw sd2 = new RightTriangleDraw(new ConsolePrinter());
+        int height2 = 3;
+        sd2.printShape(height2);
     }
 
 }
+
