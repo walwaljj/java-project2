@@ -6,11 +6,10 @@ public class BracketWithoutStack2 {
     public static void main(String[] args) {
         String brackets = "(((())))";
 
-        while (brackets.indexOf("()") != -1){
+        while (brackets.indexOf("()") != -1) {
             String[] split = brackets.split("\\(\\)");
             brackets = String.join("", split);
         }
-        boolean b = brackets.length() == 0 ? true : false;
 
     }
 }
