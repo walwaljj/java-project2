@@ -11,4 +11,11 @@ class YearTest {
     void checkLeapYear() {
         assertEquals(false, Year.checkLeapYear(1700));
     }
+
+    @Test
+    void testLeapYear(){
+        assertEquals(false, Year.isLeapYear(1700));
+        assertEquals(true, Year.isLeapYear(2020));
+        assertEquals(true, Year.isLeapYear(2400));
+    }
 }
