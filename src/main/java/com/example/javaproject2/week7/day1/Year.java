@@ -3,12 +3,17 @@ package com.example.javaproject2.week7.day1;
 public class Year {
 
     public static void main(String[] args) {
-        checkLeapYear();
+        int i = 2020;
+        if(checkLeapYear(i)){
+            System.out.println(i + " O" );
+        }else{
+            System.out.println(i + " X");
+        }
+
     }
 
-    private static void checkLeapYear() {
-        int year = 2020;
-        String str = (year % 4 == 0 && year % 100 != 0) || year % 400 ==0 ? "윤년" : "평년";
-        System.out.println(str);
+    public static boolean checkLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? true : false;
+
     }
 }
