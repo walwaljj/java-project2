@@ -6,16 +6,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class YearTest {
+    Year year = new Year();
 
     @Test
     void checkLeapYear() {
-        assertEquals(false, Year.checkLeapYear(1700));
+        assertEquals(false, year.checkLeapYear(1700));
     }
 
     @Test
     void testLeapYear(){
-        assertEquals(false, Year.isLeapYear(1700));
-        assertEquals(true, Year.isLeapYear(2020));
-        assertEquals(true, Year.isLeapYear(2400));
+        assertEquals(false, year.isLeapYear(1700));
+        assertEquals(true, year.isLeapYear(2020));
+        assertEquals(true, year.isLeapYear(2400));
     }
 }

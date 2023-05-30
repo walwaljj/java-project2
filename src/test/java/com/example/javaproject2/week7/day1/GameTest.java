@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
-
+    Game game = new Game();
     @Test
     void testis369(){
-        assertEquals("*", Game.is369(03));
-//        assertEquals("", Game.is369(100)); //*
-        assertEquals("**", Game.is369(66));
+        assertEquals("*", game.is369(03));
+        assertEquals("", game.is369(100));
+        assertEquals("**", game.is369(66));
     }
 
 }
