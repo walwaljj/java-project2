@@ -4,8 +4,8 @@ public class Game {
     public static void main(String[] args) {
 
         for (int i = 0; i < 100; i++) {
-            System.out.println(i+" "+getString(i));
-
+//            System.out.println(i+" "+getString(i));
+            System.out.println(i + is369(i));
         }
     }
 
@@ -19,5 +19,13 @@ public class Game {
         }
         return str;
     }
+//-----------------내가 작성한 코드----------------
 
+    public static String is369(int i) {
+        int a = i / 10;
+        int b = i % 10;
+        String str = (b % 3 == 0 )&& b != 0 ? " *" : "";
+        if(a == 0) return str;
+        return str + is369(a);
+    }
 }
