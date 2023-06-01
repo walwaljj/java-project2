@@ -2,15 +2,25 @@ package com.example.javaproject2.week7.opgame.service;
 
 public class OpGame {
     int remainingAnswers;
-    int a, b;
+    String cheeringUpMsg = "한번 더 해보자";
+    IOperator op;
+
+    public OpGame(IOperator op) {
+        this.op = op;
+    }
+
     public void makeQuestion() {
         remainingAnswers = 3;
-        a = 1;
-        b = 1;
+        op.setA(1);
+        op.setB(1);
+    }
+
+    public void makeQuestion(int max) {
+        op.generateQuestion(max);
     }
 
     public String getQuestion() {
-        return String.format("%d + %d = ",a,b);
+        return op.getQuestionMsg();
     }
 
     public int getRemainingAnswers() {
@@ -18,11 +28,12 @@ public class OpGame {
     }
 
     public boolean isAnswer(int answer) {
-        remainingAnswers --;
-        return (a + b) == answer;
+        remainingAnswers--;
+        return op.isEqueals(answer);
     }
 
-    public String getCheeringMsg() {
-        return "한번 더 해보자";
+    public String getCheeringUpMsg() {
+        return cheeringUpMsg;
     }
+
 }
